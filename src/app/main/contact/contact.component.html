@@ -1,0 +1,97 @@
+<div class="contactForm" id="contact">
+    <div class="title-line">
+      <div class="blue-line"></div>
+      <h2>{{ "Contact" | translate }}</h2>
+    </div>
+    <div class="formBlock">
+      <div class="text">
+        <span class="topLine">{{ "Got a problem to solve?" | translate }}</span>
+        <span>{{ "Contact Me Text" | translate }}</span>
+        <span>
+          {{ "Need a frontend developer?" | translate }}
+          <b>{{ "Contact me!" | translate }}</b>
+        </span>
+      </div>
+      <div data-aos="flip-right" class="formArea">
+        <form
+          (ngSubmit)="onSubmit(contactForm)"
+          class="text center"
+          #contactForm="ngForm"
+        >
+          <label for="name"></label>
+          <input
+            #name="ngModel"
+            minlength="2"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="{{ 'Your name' | translate }}"
+            required
+          />
+  <span *ngIf="!name.valid && name.touched" class="required-span-input">{{
+            "Please enter your name" | translate
+          }}</span>
+          <label for="email"></label>
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="lname"
+            name="email"
+            placeholder="{{ 'Your email' | translate }}"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}"
+          />
+          <span
+            *ngIf="!email.valid && email.touched"
+            class="required-span-input"
+            >{{ "Please enter your email" | translate }}</span
+          >
+          <div
+            class="email-sent"
+            [ngClass]="{ 'btn-blue': true, 'd-none': !thanksMessageVisible }"
+          >
+            {{
+              "Thank you! Your message has been sent successfully." | translate
+            }}
+          </div>
+          <label for="message"></label>
+          <textarea
+            #message="ngModel"
+            minlength="6"
+            [(ngModel)]="contactData.message"
+            id="subject"
+            name="subject"
+            placeholder="{{ 'Your message' | translate }}"
+            style="height: 200px"
+            required
+          ></textarea>
+          <span
+            *ngIf="!message.valid && message.touched"
+            class="required-span-input"
+            >{{ "Please enter a message" | translate }}</span
+          >
+          <br />
+  <label class="privacy-label">
+            <input
+              [(ngModel)]="contactData.privacyAccepted"
+              id="checkbox"
+              name="privacyAccepted"
+              type="checkbox"
+              (ngModelChange)="onPrivacyCheckboxChange()"
+              required
+            />
+            {{ "I agree to the " | translate }} <br />
+            <a id="link-imprint-form" routerLink="imprint">
+              {{ "privacy policy" | translate }}</a
+            >
+          </label>
+          <span *ngIf="privacyError" class="required-span-privacy">{{
+            "Please accept the privacy policy" | translate
+          }}</span>
+          <button type="submit" id="btn">{{ "Send message :)" | translate }}</button>
+        </form>
+      </div>
+    </div>
+  </div>

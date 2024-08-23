@@ -1,0 +1,317 @@
+.header-container {
+    display: flex;
+    background-color: #141D2F;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    justify-content: center !important;
+    position: relative;
+
+
+    .profile-img-container {
+        position: relative;
+
+        .my-profile-img {
+            position: relative;
+            top: 50px;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .header-blue-shadow {
+            position: absolute;
+            top: 50px;
+            font-size: 200px;
+            left: 26px;
+            object-fit: contain;
+        }
+    }
+
+    .curved-background {
+        display: flex;
+        justify-content: center;
+        max-width: 100% !important;
+        position: absolute !important;
+        top: 400px !important;
+    }
+
+    .title-container {
+        margin-bottom: 120px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        color: white;
+        z-index: 99;
+        margin-left: 0px !important;
+
+        .title-content {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: flex;
+                transform: rotate(-90deg);
+                font-size: 65px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 85px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 45px;
+                font-weight: 400;
+                color: #9747FF;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+
+        .btn-container {
+            height: 1px;
+            margin-top: 25px;
+            z-index: 99;
+
+            button {
+                width: 165px;
+                height: 60px;
+                background: #70E61C;
+                border-radius: 15px;
+                color: white;
+                font-size: 23px;
+                font-weight: 400;
+                box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+                transition: 0.1s ease;
+
+                &:hover {
+                    width: 175px;
+                    height: 70px;
+                    background: #9747FF;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1455px) {
+    .my-profile-img {
+        height: 750px !important;
+        left: 25px !important;
+    }
+}
+
+@media (max-width: 1370px) {
+    .title-content {
+        span {
+            font-size: 48px !important;
+        }
+
+        h1 {
+            font-size: 67px !important;
+        }
+
+        h2 {
+            font-size: 35px !important;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .my-profile-img {
+        height: 480px !important;
+        left: 10px !important;
+    }
+
+    .title-content {
+        margin-inline-start: -40px;
+       
+        span {
+            font-size: 51px !important;
+            display: inline-block;
+            line-height: 34px;
+        }
+
+        h1 {
+            font-size: 69px !important;
+        }
+
+        h2 {
+            font-size: 40px !important;
+        }
+    }
+
+    .curved-background {
+        top: -90px !important;
+        width: 100vw !important;
+    }
+}
+
+@media (max-width: 1260px) and (min-width: 1156px) {
+    .curved-background {
+        top: 10px !important;
+        height: 400px;
+    }
+
+    .header-blue-shadow {
+        height: 500px;
+    }
+}
+
+@media(max-width: 1155px) {
+    .my-profile-img {
+        height: 650px !important;
+        left: 0px !important;
+    }
+
+}
+
+@media(max-width: 1090px) {
+    .header-container {
+        flex-direction: column !important;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    .title-container {
+        margin-top: 50px !important;
+    }
+
+    .header-blue-shadow {
+        top: 90px !important;
+        width: 650px !important;
+        height: 550px !important;
+        left: -15px !important;
+    }
+}
+
+@media(max-width: 830px) {
+    .curved-background {
+        top: 490px !important;
+        width: 100vw !important;
+    }
+
+    .header-container {
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 817px) and (min-width: 501px) {
+
+    .curved-background {
+        margin-top: 140px !important;
+        height: 400px;
+    }
+}
+
+@media(max-width: 543px) and (min-width: 501px) {
+    .title-content {
+
+        span {
+            font-size: 35px !important;
+        }
+
+        h1 {
+            font-size: 45px !important;
+        }
+
+        h2 {
+            font-size: 26px !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .my-profile-img {
+        height: 480px !important;
+        left: 10px !important;
+        margin-top: 40px;
+    }
+
+    .curved-background {
+        top: 390px !important;
+    }
+
+    .title-content {
+
+        span {
+            font-size: 35px !important;
+        }
+
+        h1 {
+            font-size: 45px !important;
+        }
+
+        h2 {
+            font-size: 26px !important;
+        }
+
+        .curved-background {
+            top: 540px !important;
+        }
+    }
+
+    .btn-container {
+
+        button {
+            width: 140px !important;
+            height: 55px !important;
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media (max-width: 393px) and (min-width: 371px) {
+    .title-content {
+
+        span {
+            font-size: 29px !important;
+        }
+
+        h1 {
+            font-size: 38px !important;
+        }
+
+        h2 {
+            font-size: 22px !important;
+        }
+
+    }
+
+    .header-blue-shadow {
+        top: 20px !important;
+    }
+
+
+}
+
+@media (max-width: 370px) {
+
+    .title-content {
+        margin-top: 50px !important;
+
+        span {
+            font-size: 27px !important;
+        }
+
+        h1 {
+            font-size: 30px !important;
+        }
+
+        h2 {
+            font-size: 20px !important;
+        }
+    }
+
+    .curved-background {
+        margin-top: 120px !important;
+        height: 150px;
+    }
+}

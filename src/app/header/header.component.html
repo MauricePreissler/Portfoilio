@@ -1,0 +1,35 @@
+<div class="full-viewport-width">
+    <nav class="navbar">
+        <div class="navbar-spaceBetween">
+            <a class="name-logo" href="#header-container">
+            <div class="navbar-logo">
+                <span>Mauric</span><span style="color: #70E61C;">e</span>
+            </div>
+        </a>
+
+            <div class="navbar-menu">
+                <a class="link" href="#AboutMe">{{'About me'| translate}}</a>
+                <a class="link" href="#skills">{{'Skills'| translate}}</a>
+                <a class="link" href="#portfolio">Portfolio</a>
+            </div>
+            <div class="flag-container">
+                <img class="flag" (click)="translate.switchLanguage('en')" src="./assets/img/american-flag-2144392_640.png">
+               <img class="flag"  (click)="translate.switchLanguage('de')" src="./assets/img/germany-flag.png">>
+            </div>
+
+            <div class="burger-menu">
+                <button (click)="toggleMenu()" class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul *ngIf="menuOpen" class="menu-items">
+                    <li><a class="link" href="#AboutMe" (click)="toggleMenu()">{{'About me'| translate}}</a></li>
+                    <li><a class="link" href="#skills" (click)="toggleMenu()">{{'Skills'| translate}}</a></li>
+                    <li> <a class="link" href="#portfolio" (click)="toggleMenu()">Portfolio</a></li>
+                    <li> <a class="link" href="#contact" (click)="toggleMenu()">{{'Contact'| translate}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>

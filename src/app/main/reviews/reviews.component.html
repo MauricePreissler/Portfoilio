@@ -1,0 +1,36 @@
+
+  
+  <div class="reviews-container">
+
+    <img class="reviewSign" src="./assets/img/review-sign.png" alt="">
+    <div class="uper">
+      <div class="uper-div">
+        <div class="review-div">
+          <span id="description">{{reviews[i].discreption | translate}}</span>
+          <div class="autor-parent">
+            <div class="seperator-blue"></div>
+            <span id="autor">{{reviews[i].name}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-right-content">
+        <div class="ellipse">
+          <img [src]="reviews[i].image" alt="{{reviews[i].name}}"/>
+        </div>
+        <div class="green-line"></div>
+      </div>
+    </div>
+    
+    <div class="under-div">
+      <img (click)="reviewForward()" id="arrow-back" src="./assets/img/arrow_back.png" alt="Previous" />
+      
+      <!-- Dynamische Punkte basierend auf dem aktuellen Index i -->
+      <img 
+        *ngFor="let review of reviews; let index = index"
+        [src]="index === i ? './assets/img/Ellipse_2.png' : './assets/img/Ellipse_3.png'" 
+        alt="Review Indicator">
+      
+      <img (click)="rewiewBack()" id="arrow-next" src="./assets/img/arrow_forward.png" alt="Next" />
+    </div>
+  </div>
+  

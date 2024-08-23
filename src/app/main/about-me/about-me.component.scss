@@ -1,0 +1,181 @@
+.about-me-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-left: 102px;
+    max-width: 1440px;
+    position: relative;
+    
+
+    .left-content-infos {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+    }
+    .about-me-left-content {
+        box-sizing: border-box;
+        color: white;
+        width: 50%;
+        padding-right: 121px;
+        z-index: 5;
+       h2 {
+            font-size: 90px;
+            font-weight: 700;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            margin: unset;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        div {
+            font-family: 'Poppins', sans-serif;
+
+        }
+    }
+    .about-me-right-content {
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 5;
+     .ellipse {
+            width: 453px;
+            height: 453px;
+            border: 4px solid  #70E61C;
+            border-radius: 100%;
+            overflow: hidden;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-shrink: 0;
+
+            img {
+                width: 75%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        .green-line {
+            height: 4px;
+            width: 100px;
+            background-color:  #70E61C;
+        }
+}
+.purple-shadow {
+        position: absolute;
+        top: 80px;
+        right: -10%;
+        height: 600px;
+        width: 600px;
+    }
+}
+@media(max-width: 1090px) {
+    .about-me-container {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 100px 100px !important;
+        padding-bottom: 0px !important;
+        gap: 50px !important;
+    }
+.blue-line {
+        display: none;
+    }
+.about-me-left-content {
+        padding-right: 0px !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 700px) {
+    .about-me-container {
+        padding-left: unset !important;
+        padding-right: unset !important;
+    }
+.about-me-left-content {
+        width: 90vw !important;
+    }
+}
+@media (max-width: 830px) {
+    .ellipse {
+        display: none !important;
+
+        img {
+            display: none !important;
+        }
+    }
+.img {
+        display: flex !important;
+        justify-content: center !important;
+    }
+.flex-row {
+        display: flex;
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+.p {
+        text-align: center !important;
+    }
+.about-me-container {
+        display: flex;
+        justify-content: center !important;
+        padding-top: 120px !important;
+        text-align: center !important;
+        overflow: hidden;
+    }
+    .purple-shadow {
+        display: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .about-me-container {
+        padding-top: 100px !important;
+        h2 {
+            font-size: 65px !important;   
+        }
+.purple-shadow {
+            top: 300px;   
+        }
+    }
+}
+@media (max-width: 490px) {
+    .about-me-container {
+        margin-top: -75px;
+        justify-content: center !important;
+        padding-top: 100px !important;
+        padding-left: 0px !important;
+    }
+}
+@media (max-width: 400px) {
+.about-me-container {
+        padding-top: 80px !important;
+        padding-right: unset !important;
+    }
+.about-me-left-content {
+        h2 {
+            font-size: 49px !important;
+        }
+    }
+}
